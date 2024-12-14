@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        height:100vh;
+        width:100vw;
+    }
+    .header{grid-area: header;}
+    .smallbox1{grid-area: smallbox1;}
+    .smallbox2{grid-area: smallbox2;}
+    .smallbox3{grid-area: smallbox3;}
+    .sidebar{grid-area: sidebar;}
+    .maincontent{grid-area: maincontent;}
+    .footer{grid-area: footer;}
+    .gridcontainer{
+        display: grid;
+        gap: 20px;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+        'header header header .'
+        'smallbox1 smallbox2 smallbox3 sidebar'
+        'maincontent maincontent maincontent sidebar'
+         'maincontent maincontent maincontent sidebar'
+         'footer footer footer footer';
+    }
+    .gridcontainer>div{
+   
+   text-align: center;
+   padding: 20px;
+   font-size: 30px;
+   margin:10px;
+   background-color: rgb(255, 47, 0) ;
+    }
+</style>
+</head>
+<body>
+    <div class="gridcontainer">
+        <div class="header">Header</div>
+        <div class="smallbox1">Small box</div>
+        <div class="smallbox2">Small box</div>
+        <div class="smallbox3">Small box</div>
+        <div class="sidebar">Side bar</div>
+        <div class="maincontent">Main content</div>
+        <div class="footer">Footer</div>
+        </div>
+    
+</body>
+</html>
